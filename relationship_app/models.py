@@ -1,9 +1,9 @@
-from django.db import models
+# relationship_app/models.py
+from django.db import models 
 
 class Author(models.Model):
     name = models.CharField(max_length=100)
-    bio = models.TextField(blank=True, null=True)
-    birth_date = models.DateField(blank=True, null=True)
+    bio = models.TextField()
 
     def __str__(self):
         return self.name
